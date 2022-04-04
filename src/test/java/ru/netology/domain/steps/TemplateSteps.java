@@ -46,7 +46,7 @@ public class TemplateSteps {
         verificationPage.verifyCodeIsInvalid();
     }
 
-    @Тогда("осуществляется выбор карты")
+    @Тогда("осуществляется выбор карты {string}")
     public void selectCard(String card) {
         dashboardPage.selectCardToTransfer(card);
     }
