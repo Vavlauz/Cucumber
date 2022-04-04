@@ -5,20 +5,16 @@ import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Пусть;
 import io.cucumber.java.ru.Тогда;
-import ru.netology.domain.data.DataHelper;
 import ru.netology.domain.page.DashboardPage;
 import ru.netology.domain.page.LoginPage;
 import ru.netology.domain.page.TransferPage;
 import ru.netology.domain.page.VerificationPage;
-
-import static ru.netology.domain.data.DataHelper.getFirstCardInfo;
 
 
 public class TemplateSteps {
     private static LoginPage loginPage;
     private static DashboardPage dashboardPage;
     private static VerificationPage verificationPage;
-    private static TransferPage transferPage = new TransferPage();
 
     @Пусть("открыта страница с формой авторизации {string}")
     public void openAuthPage(String url) {
@@ -52,7 +48,7 @@ public class TemplateSteps {
 
     @Тогда("происходит перевод с карты на карту с суммой {string} и номером карты {string}")
     public void transfer(String amount, String cardNumber) {
-        transferPage.makeTransfer(amount, cardNumber);
+        dashboardPage = new TransferPage().makeTransfer(amount, cardNumber);
     }
 
 }
