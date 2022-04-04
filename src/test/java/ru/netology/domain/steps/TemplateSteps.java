@@ -18,8 +18,7 @@ public class TemplateSteps {
     private static LoginPage loginPage;
     private static DashboardPage dashboardPage;
     private static VerificationPage verificationPage;
-    private static TransferPage transferPage;
-    private static DataHelper.CardInfo data;
+    private static TransferPage transferPage = new TransferPage();
 
     @Пусть("открыта страница с формой авторизации {string}")
     public void openAuthPage(String url) {

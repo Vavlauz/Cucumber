@@ -20,18 +20,6 @@ public class DashboardPage {
         heading.shouldBe(visible);
     }
 
-    public int getCardBalance(DataHelper.CardInfo cardInfo) {
-        var text = cards.findBy(text(cardInfo.getCardNumber().substring(12, 16))).getText();
-        return extractBalance(text);
-    }
-
-    private int extractBalance(String text) {
-        var start = text.indexOf(balanceStart);
-        var finish = text.indexOf(balanceFinish);
-        var value = text.substring(start + balanceStart.length(), finish);
-        return Integer.parseInt(value);
-    }
-
     public TransferPage selectCardToTransfer(String cardInfo) {
         cards.findBy(text(cardInfo.substring(12, 16))).$("button").click();
         return new TransferPage();
@@ -40,4 +28,5 @@ public class DashboardPage {
     public void verifyIsDashboardPage() {
         heading.shouldBe(visible);
     }
+
 }

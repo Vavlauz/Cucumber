@@ -20,8 +20,8 @@ public class TransferPage {
     }
 
     public DashboardPage makeTransfer(String amountToTransfer, String cardNumber) {
-        amountInput.setValue(String.valueOf(amountToTransfer));
-        fromInput.setValue(String.valueOf(cardNumber));
+        amountInput.setValue(amountToTransfer);
+        fromInput.setValue(cardNumber);
         transferButton.click();
         return new DashboardPage();
     }
