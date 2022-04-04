@@ -13,13 +13,6 @@ public class LoginPage {
     private SelenideElement transferHead = $(byText("Пополнение карты"));
 
 
-//    public VerificationPage validLogin(DataHelper.AuthInfo info) {
-//        loginField.setValue(info.getLogin());
-//        passwordField.setValue(info.getPassword());
-//        loginButton.click();
-//        return new VerificationPage();
-//    }
-
     public VerificationPage validLogin(String login, String password) {
         loginField.setValue(login);
         passwordField.setValue(password);

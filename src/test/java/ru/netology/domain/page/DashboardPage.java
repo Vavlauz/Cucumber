@@ -2,6 +2,7 @@ package ru.netology.domain.page;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.jetbrains.annotations.NotNull;
 import ru.netology.domain.data.DataHelper;
 
 import static com.codeborne.selenide.Condition.text;
@@ -31,17 +32,12 @@ public class DashboardPage {
         return Integer.parseInt(value);
     }
 
-//    public TransferPage selectCardToTransfer(DataHelper.CardInfo cardInfo) {
-//        cards.findBy(text(cardInfo.getCardNumber().substring(12, 16))).$("button").click();
-//        return new TransferPage();
-//    }
-
     public TransferPage selectCardToTransfer(String cardInfo) {
         cards.findBy(text(cardInfo.substring(12, 16))).$("button").click();
         return new TransferPage();
     }
 
-    public void verifyIsDashboardPage(){
+    public void verifyIsDashboardPage() {
         heading.shouldBe(visible);
     }
 }

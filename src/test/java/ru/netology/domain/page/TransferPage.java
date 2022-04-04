@@ -19,22 +19,6 @@ public class TransferPage {
         transferHead.shouldBe(visible);
     }
 
-//    public DashboardPage makeTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
-//        amountInput.setValue(amountToTransfer);
-//        fromInput.setValue(cardInfo.getCardNumber());
-//        transferButton.click();
-//        return new DashboardPage();
-//    }
-//
-//    public DashboardPage makeTransfer2(String amountToTransfer, DataHelper.CardInfo cardInfo) {
-//        amountInput.sendKeys(chord(SHIFT,HOME,BACK_SPACE));
-//        amountInput.setValue(amountToTransfer).sendKeys(TAB);
-//        fromInput.sendKeys(Keys.BACK_SPACE);
-//        fromInput.setValue(cardInfo.getCardNumber());
-//        transferButton.click();
-//        return new DashboardPage();
-//    }
-
     public DashboardPage makeTransfer(String amountToTransfer, String cardNumber) {
         amountInput.setValue(amountToTransfer);
         fromInput.setValue(cardNumber);
