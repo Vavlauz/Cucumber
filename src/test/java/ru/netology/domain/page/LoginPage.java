@@ -1,7 +1,6 @@
 package ru.netology.domain.page;
 
 import com.codeborne.selenide.SelenideElement;
-import ru.netology.domain.data.DataHelper;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;

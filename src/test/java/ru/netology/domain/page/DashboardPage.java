@@ -2,8 +2,6 @@ package ru.netology.domain.page;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import org.jetbrains.annotations.NotNull;
-import ru.netology.domain.data.DataHelper;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
