@@ -11,12 +11,9 @@ import static com.codeborne.selenide.Selenide.$$;
 public class DashboardPage {
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
-    private SelenideElement heading = $("[data-test-id='dashboard']");
+    private SelenideElement heading = $("[data-test-id=dashboard]");
     private ElementsCollection cards = $$(".list__item");
 
-    public DashboardPage() {
-        heading.shouldBe(visible);
-    }
 
     public TransferPage selectCardToTransfer(String cardInfo) {
         cards.findBy(text(cardInfo.substring(12, 16))).$("button").click();
